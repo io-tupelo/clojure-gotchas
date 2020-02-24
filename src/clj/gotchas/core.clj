@@ -1,4 +1,4 @@
-(ns gotchas.core
+(ns .core
   (:use tupelo.core)
   (:require
     [schema.core :as s])

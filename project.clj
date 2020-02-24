@@ -5,6 +5,9 @@
             :url  "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [
                  [org.clojure/clojure "1.10.1"]
+                 [org.clojure/spec.alpha "0.2.176"]
+                 [org.clojure/test.check "1.0.0"]
+                 [org.clojure/tools.reader "1.3.2"]
                  [prismatic/schema "1.1.12"]
                  [tupelo "0.9.192"]
                  ]
@@ -16,9 +19,8 @@
   :global-vars {*warn-on-reflection* false}
   :main ^:skip-aot demo.core
 
-  :source-paths            ["src/clj"]
-  :java-source-paths       ["src/java"]
-  :test-paths              ["test/clj"]
+  :source-paths            ["src/clj" "src/cljc" ]
+  :test-paths              ["test/clj" "test/cljc" ]
   :target-path             "target/%s"
   :compile-path            "%s/class-files"
   :clean-targets           [:target-path]
